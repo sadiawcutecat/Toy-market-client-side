@@ -31,7 +31,7 @@ const Blogs = () => {
 
                 </div>
                 <div className="collapse-content">
-                    <p> <span className="text-slate-900 font-bold">Answer:-</span>Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.</p>
+                    <p> <span className="text-slate-900 font-bold">Answer:-</span>Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. Its a layer built on the top of the Node js that helps manage servers and routes.</p>
                     <p> NestJS is a framework for developing modern server-side applications in Node. js. It is built on top of Express, a popular server framework for Node. js, and provides a robust set of features for building efficient, scalable, and enterprise-grade applications.</p>
                 </div>
             </div>
@@ -42,7 +42,7 @@ const Blogs = () => {
                 </div>
                 <div className="collapse-content">
                     <p> <span className="text-slate-900 font-bold">Answer:-</span> Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.</p>
-                    <p>Mongoose's aggregate() function returns an instance of Mongoose's Aggregate class. Aggregate instances are thenable, so you can use them with await and promise chaining. The Aggregate class also supports a chaining interface for building aggregation pipelines.</p>
+                    <p>MongoDB aggregate() function returns an instance of MongoDB Aggregate class. Aggregate instances are thenable, so you can use them with await and promise chaining. The Aggregate class also supports a chaining interface for building aggregation pipelines.</p>
                 </div>
             </div>
 
