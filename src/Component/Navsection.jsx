@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from '../assets/images/logo.png'
 
 
 const Navsection = () => {
     return (
-        <div>
-            <div className="navbar bg-accent font-bold">
+      
+            <div className="navbar bg-accent font-bold px-4">
                 <div className="navbar-start">
-                    
-                    <a className="text-3xl text-white">TOY MAGIC</a>
+                    <img className="h-9 w-9" src={logo} alt="" />
+                    <a className="text-3xl text-white ms-4">TOY MAGIC</a>
                 </div>
                 <div className="navbar-center  lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
@@ -22,7 +23,7 @@ const Navsection = () => {
                 <button className="text-white py-2 px-5 border border-white">login</button>
                 </div>
             </div>
-        </div>
+       
     );
 };
 
