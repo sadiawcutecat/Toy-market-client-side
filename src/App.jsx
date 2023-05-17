@@ -1,5 +1,6 @@
 
 import './App.css'
+import Footer from './Component/Footer'
 import Navsection from './Component/Navsection'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
    <Navsection></Navsection>
+   <Footer></Footer>
     </>
   )
 }
