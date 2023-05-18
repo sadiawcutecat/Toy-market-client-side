@@ -14,16 +14,21 @@ const Navsection = () => {
                 <div className="navbar-center  lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
                         <Link to='/'><li><a>Home</a></li></Link>
-                        <Link to='AllToys'><li><a>All Toys</a></li></Link>
-                        <Link to='myToys'> <li><a>My Toys</a></li></Link>
-                        <Link to='AddToys'><li><a>Add A Toy</a></li></Link>
-                        <Link to='blogs'><li><a>Blogs</a></li></Link>
+                        <Link to='/AllToys'><li><a>All Toys</a></li></Link>
+                        <Link to='/myToys'> <li><a>My Toys</a></li></Link>
+                        <Link to='/AddToys'><li><a>Add A Toy</a></li></Link>
+                        <Link to='/blogs'><li><a>Blogs</a></li></Link>
                        </ul>
                 </div>
                 <div className="navbar-end gap-2">
                 <FaUserCircle style={{ fontSize: '2rem' }} className="text-white" />
+                <Link to='/login'>
                 <button className="text-white py-2 px-5 border border-white">login</button>
+                </Link>
+               
+                <Link to='/signout'>
                 <button className="text-white py-2 px-5 border border-white">Sing Out</button>
+                </Link>
                 </div>
             </div>
        
