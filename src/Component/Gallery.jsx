@@ -10,83 +10,83 @@ import kid6 from '../assets/images/kids6.jpg'
 const Gallery = () => {
     return (
         <div>
-            <div className='my-5'>
-                <h2 className=' text-3xl text-accent font-serif font-bold text-center'> Toys Gallery By Age</h2>
-                <Marquee speed={50} pauseOnClick={true} >
-                    <div className="card w-96 bg-base-100 shadow-xl">
+            <div className='mt-12 mb-12 '>
+                <h2 className=' text-4xl text-accent font-serif font-bold text-center my-9'> Toys Gallery By Age</h2>
+                <Marquee speed={50} pauseOnClick={true}  >
+                    <div className="card w-96  bg-slate-300 shadow-xl ms-5">
                         
-                            <img src={kid1} alt="" />
+                            <img className='h-[250px] w-full' src={kid1} alt="" />
                        
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">0-18 Months</h2>
+                            <h2 className="card-title text-orange-500 font-serif">0-18 Months</h2>
                             
                             <div className="card-actions">
-                                <button className="btn btn-primary">show More Toys</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                        <img src={kid2} alt="" />
-                        </figure>
+                    <div className="card w-96  bg-slate-300 shadow-xl ms-5">
+                       
+                        <img className='h-[250px] w-full' src={kid2} alt="" />
+                        
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">19-36 Months</h2>
+                            <h2 className="card-title text-orange-500 font-serif">19-36 Months</h2>
                             
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                        <img src={kid3} alt="" />
-                        </figure>
+                    <div className="card w-96 bg-slate-300  shadow-xl ms-5">
+                        
+                        <img className='h-[250px] w-full' src={kid3} alt="" />
+                       
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">3-5 Years</h2>
+                            <h2 className="card-title  text-orange-500 font-serif">3-5 Years</h2>
                         
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                        <img src={kid4} alt="" />
-                        </figure>
+                    <div className="card w-96  bg-slate-300 shadow-xl ms-5">
+                      
+                        <img className='h-[250px] w-full' src={kid4} alt="" />
+                   
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">6-9 Years</h2>
+                            <h2 className="card-title  text-orange-500 font-serif">6-9 Years</h2>
                         
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                        <img src={kid5} alt="" />
-                        </figure>
+                    <div className="card w-96  bg-slate-300 shadow-xl ms-5">
+                        
+                        <img className='h-[250px] w-full' src={kid5} alt="" />
+                     
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">10-11 Years</h2>
+                            <h2 className="card-title text-orange-500 font-serif">10-11 Years</h2>
                       
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                        <img src={kid6} alt="" />
-                        </figure>
+                    <div className="card w-96  bg-slate-300 shadow-xl ms-5">
+                        
+                        <img className='h-[250px] w-full' src={kid6} alt="" />
+                      
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">12+ Years</h2>
+                            <h2 className="card-title  text-orange-500 font-serif">12+ Years</h2>
                          
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-accent text-white font-bold font-serif">show More Toys</button>
                             </div>
                         </div>
                     </div>

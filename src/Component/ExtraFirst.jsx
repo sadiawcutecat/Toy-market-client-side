@@ -8,7 +8,7 @@ const ExtraFirst = () => {
     return (
 
 
-        <div>
+        <div className='mt-10'>
             <h1 className='text-accent text-5xl text-center font-bold font-serif mt-8 mb-8'>How To Buy ?</h1>
             <div className='flex justify-center gap-28 my-11'>
                 <div>
