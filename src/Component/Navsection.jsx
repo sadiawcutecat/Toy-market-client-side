@@ -23,6 +23,7 @@ const Navsection = () => {
                 <div className="navbar-end gap-2">
                 <FaUserCircle style={{ fontSize: '2rem' }} className="text-white" />
                 <button className="text-white py-2 px-5 border border-white">login</button>
+                <button className="text-white py-2 px-5 border border-white">Sing Out</button>
                 </div>
             </div>
        
