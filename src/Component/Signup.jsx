@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
-import { FcGoogle } from 'react-icons/fc';
+
 
 const Signup = () => {
     
-const {createUser,handleGoogleSignIn } = useContext(AuthContext)
+const {createUser } = useContext(AuthContext)
 
         const handleSignup = event =>{
             event.preventDefault();
@@ -64,18 +64,11 @@ createUser(email, password)
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className="btn btn-accent text-white font-seriffont bold" type="submit" value="SignUp" />
+                                    <input className="btn btn-accent text-white font-serif font bold" type="submit" value="SignUp" />
                                 </div>
 
                             </form>
-                            <p className='text-center'>or</p>
-                            <div>
-                                <button onClick={()=> handleGoogleSignIn()} className=" w-full btn btn-outline btn-accent text-white font-serif font bold gap-3">
-                                    <FcGoogle style={{ fontSize: '2rem' }}/>
-                                SignUp With Google
-                                </button>
                            
-                            </div>
                             <p className='text-center'>Already have an account? please <Link className='text-orange-500 font-bold font-serif' to="/login">Login</Link></p>
                             
                         </div>

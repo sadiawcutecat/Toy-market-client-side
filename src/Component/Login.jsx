@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
 
-const {signIn} = useContext(AuthContext)
+const {signIn, handleGoogleSignIn} = useContext(AuthContext)
 
 const handleLogin = event =>{
     event.preventDefault();
@@ -29,7 +30,7 @@ const handleLogin = event =>{
 
                     <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <h1 className="text-3xl text-center font-bold">Login now!</h1>
+                            <h1 className="text-3xl text-center text-accent font-bold">Login now!</h1>
                             <form onSubmit={handleLogin}>
                                 <div className="form-control">
                                     <label className="label">
@@ -41,7 +42,7 @@ const handleLogin = event =>{
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                                    <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
@@ -51,7 +52,15 @@ const handleLogin = event =>{
                                 </div>
 
                             </form>
-                            <p>New to TOY MAGIC? please <Link className='text-orange-500 font-bold font-serif' to="/signup">Sign Up</Link></p>
+                            <p className='text-center'>or</p>
+                            <div>
+                                <button onClick={()=> handleGoogleSignIn()} className=" w-full btn btn-outline btn-accent text-white font-serif font bold gap-3">
+                                    <FcGoogle style={{ fontSize: '2rem' }}/>
+                                SignUp With Google
+                                </button>
+                           
+                            </div>
+                            <p className='text-center'>New to TOY MAGIC? please <Link  className='text-orange-500 font-bold font-serif' to="/signup">Sign Up</Link></p>
                         </div>
                     </div>
                 </div>
