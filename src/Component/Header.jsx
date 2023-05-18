@@ -12,7 +12,7 @@ const Header = () => {
                     <img src={banner1} className="w-[50vw] h-[600px]" />
                     <div className='mt-60 px-20 w-[50vw] h-[600px] '>
                         <h1 className='text-4xl text-accent font-serif font-bold'>Sheriff Woody Toy </h1>
-                        <p className='my-4 font-serif'>Sheriff Woody is a fictional character and the main protagonist <br />
+                        <p className='my-4 font-serif text-orange-500'>Sheriff Woody is a fictional character and the main protagonist <br />
                          in Pixar's animated film series "Toy Story".</p>
                          <button className="btn btn-accent sm:btn-sm md:btn-md lg:btn-lg font-serif text-white font-bold">View More</button>
                     </div>
@@ -21,7 +21,7 @@ const Header = () => {
                     <img src={banner2} className="w-[50vw] h-[600px]" />
                     <div className='mt-60 px-20 w-[50vw] h-[600px] '>
                         <h1 className='text-4xl text-accent font-serif font-bold'>Frozen Toy </h1>
-                        <p className='my-4 font-serif'>"Frozen" is a popular animated musical film produced by Walt Disney Animation Studios."Frozen" is known for its memorable musical numbers.</p>
+                        <p className='my-4 font-serif  text-orange-500'>"Frozen" is a popular animated musical film produced by Walt Disney Animation Studios."Frozen" is known for its memorable musical numbers.</p>
                         <button className="btn btn-accent sm:btn-sm md:btn-md lg:btn-lg font-serif text-white font-bold">View More</button>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Header = () => {
                     <img src={banner3} className="w-[50vw] h-[600px]" />
                     <div className='mt-60 px-20 w-[50vw] h-[600px] '>
                         <h1 className='text-4xl text-accent font-serif font-bold'>Donald Duck Toy </h1>
-                        <p className='my-4 font-serif'>Donald Duck is a beloved Disney character known for his distinctive voice, humorous antics, and signature temper. Donald Duck is known for his energetic and often easily frustrated personality.</p>
+                        <p className='my-4 font-serif  text-orange-500'>Donald Duck is a beloved Disney character known for his distinctive voice, humorous antics, and signature temper. Donald Duck is known for his energetic and often easily frustrated personality.</p>
                         <button className="btn btn-accent sm:btn-sm md:btn-md lg:btn-lg font-serif text-white font-bold">View More</button>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ const Header = () => {
                     <img src={banner4} className="w-[50vw] h-[600px]" />
                     <div className='mt-60 px-20 w-[50vw] h-[600px] '>
                         <h1 className='text-4xl text-accent font-serif font-bold'>Disney princes Toy </h1>
-                        <p className='my-4 font-serif'>Disney Princes refer to the male protagonists in Disney animated films who play romantic and heroic roles. some notable Disney Princes: Prince Charming (Cinderella), Prince Phillip (Sleeping Beauty), Beast/Prince Adam (Beauty and the Beast), Prince Eric (The Little Mermaid), Aladdin (Aladdin), Li Shang (Mulan). </p>
+                        <p className='my-4 font-serif  text-orange-500'>Disney Princes refer to the male protagonists in Disney animated films who play romantic and heroic roles. some notable Disney Princes: Prince Charming (Cinderella), Prince Phillip (Sleeping Beauty), Beast/Prince Adam (Beauty and the Beast), Prince Eric (The Little Mermaid), Aladdin (Aladdin), Li Shang (Mulan). </p>
                          <button className="btn btn-accent sm:btn-sm md:btn-md lg:btn-lg font-serif text-white font-bold">View More</button>
                     </div>
                 </div>
