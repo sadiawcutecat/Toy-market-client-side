@@ -10,6 +10,7 @@ function App() {
   return (
     <>
    <Navsection></Navsection>
+   
    <Outlet></Outlet>
    <Footer></Footer>
     </>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {FaUserCircle } from 'react-icons/fa';
 import logo from '../assets/images/logo.png'
 
 
@@ -19,7 +20,8 @@ const Navsection = () => {
                         <Link to='blogs'><li><a>Blogs</a></li></Link>
                        </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-2">
+                <FaUserCircle style={{ fontSize: '2rem' }} className="text-white" />
                 <button className="text-white py-2 px-5 border border-white">login</button>
                 </div>
             </div>
