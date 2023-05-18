@@ -31,7 +31,7 @@ createUser(email, password)
 
                     <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <h1 className="text-3xl text-center font-bold">Sign Up</h1>
+                            <h1 className="text-3xl text-center text-accent font-bold">Sign Up</h1>
                             <form onSubmit={handleSignup}>
                                 <div className="form-control">
                                     <label className="label">
