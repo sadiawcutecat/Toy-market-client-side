@@ -1,6 +1,8 @@
+import useTitle from "./useTitle";
 
 
 const Blogs = () => {
+    useTitle('Blogs')
     return (
         <div>
             <div tabIndex={0} className="collapse group">

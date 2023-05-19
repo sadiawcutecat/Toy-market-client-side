@@ -27,7 +27,7 @@ const Navsection = () => {
                 <FaUserCircle style={{ fontSize: '2rem' }} className="text-white" />
                 {
                     user?<Link to='/signout'>
-                    <button onClick={()=>handleSignOut()} className="text-white py-2 px-5 border border-white">Sing Out</button>
+                    <button  onClick={()=>handleSignOut()} className="text-white py-2 px-5 border border-white">Sing Out</button>
                     </Link>
                      :
                      <Link to='/login'>

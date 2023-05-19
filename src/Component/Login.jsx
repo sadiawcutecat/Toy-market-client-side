@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
+import useTitle from './useTitle';
 
 const Login = () => {
 
+    useTitle('Login')
 const {signIn, handleGoogleSignIn} = useContext(AuthContext)
 
 const handleLogin = event =>{

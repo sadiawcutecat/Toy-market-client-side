@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
-
+import useTitle from './useTitle';
 
 const Signup = () => {
+    useTitle('Signup')
     
 const {createUser } = useContext(AuthContext)
 
