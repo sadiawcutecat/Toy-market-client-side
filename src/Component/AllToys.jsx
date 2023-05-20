@@ -23,8 +23,10 @@ const AllToys = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
             {
                 allToys?.map(alltoy => <>
+                
                     <div>
 
                         <div className="card w-96 h-auto bg-base-100 shadow-xl">

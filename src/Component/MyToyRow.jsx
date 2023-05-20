@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AuthProvider from './provider/AuthProvider';
 
 const MyToyRow = ({myToy}) => {
+    // const {user } = useContext(AuthProvider);
     
-        const { _id,toys_name,photo,seller_name,  seller_email,sub_category,price, rating,quantity } = myToy;
+        const { _id,toys_name,photo,seller_name,  email,sub_category,price, rating,quantity } = myToy;
         console.log(myToy);
     return (
         <div>
+           
             <tr>
          
             <td>
@@ -19,7 +22,7 @@ const MyToyRow = ({myToy}) => {
                 {toys_name}
             </td>
             <td>{seller_name}</td>
-            <td>{seller_email}</td>
+            <td>{email}</td>
             <td>{sub_category}</td>
             <td>${price}</td>
             <td>{rating}</td>

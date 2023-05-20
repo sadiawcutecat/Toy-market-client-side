@@ -9,14 +9,24 @@ const MyToy = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
 
-    const url = `http://localhost:5000//toys?email=${user?.email}`;
+
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data =>
-               
-                 setMyToys(data))
-    }, [url]);
+        const fetchData = async () => {
+            const response = await fetch(`http://localhost:5000/api/myToys?email=${user?.email}`);
+            if (response.ok) {
+                const data = await response.json();
+                setMyToys(data);
+            } else {
+                // Error occurred while fetching data
+                console.error('Error fetching data!');
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
+
     return (
         <div className="overflow-x-auto">
             <table className="table table-compact w-full">

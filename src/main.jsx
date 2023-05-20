@@ -15,6 +15,7 @@ import AuthProvider from './Component/provider/AuthProvider.jsx';
 import AddToy from './Component/AddToy.jsx';
 import MyToy from './Component/MyToy.jsx';
 import AllToys from './Component/AllToys.jsx';
+import PrivateRoute from './Component/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/blogs',
-        element: <Blogs></Blogs>
+        element:<PrivateRoute> <Blogs></Blogs></PrivateRoute>
       },
       {
         path: '/login',
