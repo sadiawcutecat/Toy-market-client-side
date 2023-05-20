@@ -1,16 +1,66 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from './provider/AuthProvider';
+import useTitle from './useTitle';
 
 const AddToy = () => {
+    useTitle('AddToy')
+    const { user } = useContext(AuthContext);
+
+    const handleAddToy = event => {
+
+
+        event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const seller_name =form.Seller_name.value;
+        const email = user?.email;
+        const sub_category = form.Sub_category.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value
+
+        const toys = {
+            toys_name: name,
+            photo,
+            seller_name,
+            email, 
+            sub_category,
+            price,
+            rating,
+            quantity
+        }
+
+        console.log(toys);
+
+        fetch(`http://localhost:5000/api/toys`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(toys)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    <div className="alert alert-success shadow-lg">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span>Toys Added Successfully</span>
+                        </div>
+                    </div>
+                }
+            })
+
+    }
+
+
+
     return (
-        //     - Picture URL of the toy,
-        // - Name,
-        // - seller name (if available from the logged in user)
-        // - seller email (info from the logged in user)
-        // - Sub-category ( For example: if the website is based on Educational and learning toys, the sub-categories can be Math Toys, Language Toys, and Science Toys.)
-        // - Price, 
-        // - Rating, 
-        // - Available quantity
-        // - Detail description
+
         <div>
             <div className="hero  bg-base-200">
                 <div className="w-2/3 hero-content flex-col lg:flex-col">
@@ -18,7 +68,7 @@ const AddToy = () => {
                     <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
                         <div className="card-body">
                             <h1 className="text-3xl text-center text-accent font-bold">Add A Toy</h1>
-                            <form >
+                            <form onSubmit={handleAddToy}>
                                 <div className='flex gap-6 font-bold '>
                                     <div className="form-control w-1/2">
                                         <label className="label">
@@ -38,31 +88,26 @@ const AddToy = () => {
                                         <label className="label">
                                             <span className="label-text">Seller Name</span>
                                         </label>
-                                        <input type="text" name='seller name' placeholder="seller name" className="input input-bordered" />
+                                        <input type="text" name='seller_name' placeholder="seller name" className="input input-bordered" />
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Seller Email</span>
                                         </label>
-                                        <input type="email" name='seller email' placeholder="seller email" className="input input-bordered" />
+                                        <input type="email" name='seller_email' value={user?.email} placeholder="seller email" className="input input-bordered " disabled />
                                     </div>
                                 </div>
                                 <div className='flex gap-6 font-bold'>
                                     <div className="form-control w-1/2">
-                                       
-                                    <label className='mt-2' for="category">Sub-Category</label>
-                                          <select className='h-12 mt-2 input input-bordered' name="Sub-category" id='sub-category' >
-                                        
-                                          <option value="frozen dolls">frozen dolls</option>
-                                          <option value="animation characters">animation characters</option>
-                                          <option value="donald duck">donald duck</option>
-                                      </select>
-                                       
-                                      
-                                        {/* <label className="label">
-                                            <span className="label-text">Sub-Category</span>
-                                        </label>
-                                        <input type="text" name='sub' placeholder="sub-category" className="input input-bordered" /> */}
+
+                                        <label className='mt-2' for="category">Sub-Category</label>
+                                        <select className='h-12 mt-2 input input-bordered' name="Sub_category" id='sub-category' >
+
+                                            <option value="frozen dolls">frozen dolls</option>
+                                            <option value="animation characters">animation characters</option>
+                                            <option value="donald duck">donald duck</option>
+                                        </select>
+
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
@@ -90,16 +135,6 @@ const AddToy = () => {
                                 </div>
                                 <button className=" my-9 btn btn-block btn-accent text-white font-serif font-bold">ADD A TOY</button>
 
-                                {/* <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Password</span>
-                                    </label>
-                                    <input type="password" name='password' placeholder="password" className="input input-bordered" />
-
-                                </div>
-                                <div className="form-control mt-6">
-                                    <input className="btn btn-accent  text-white font-seriffont bold" type="submit" value="ADD A Toy" />
-                                </div> */}
 
                             </form>
 
