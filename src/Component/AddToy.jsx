@@ -8,14 +8,12 @@ const AddToy = () => {
     const { user } = useContext(AuthContext);
 
     const handleAddToy = event => {
-
-
         event.preventDefault();
 
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
-        const seller_name =form.Seller_name.value;
+        const seller_name = form.Seller_name.value;
         const email = user?.email;
         const sub_category = form.Sub_category.value;
         const price = form.price.value;
@@ -26,7 +24,7 @@ const AddToy = () => {
             toys_name: name,
             photo,
             seller_name,
-            email, 
+            email,
             sub_category,
             price,
             rating,
@@ -45,14 +43,14 @@ const AddToy = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.insertedId) {
-                    <div className="alert alert-success shadow-lg">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <span>Toys Added Successfully</span>
-                        </div>
-                    </div>
-                }
+                // if (data.insertedId) {
+                //     <div className="alert alert-success shadow-lg">
+                //         <div>
+                //             <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                //             <span>Toys Added Successfully</span>
+                //         </div>
+                //     </div>
+                // }
             })
 
     }
