@@ -6,6 +6,7 @@ In this Website
 - have Toys list.
 - user can view toys gallery , All Toys, My Toys.
 - user can See how to buy.
+- user can add toy.
 - have extra section which have customer comments .
 - if user is singed in then he visit the website
 - have blog page

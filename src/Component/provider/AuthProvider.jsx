@@ -39,11 +39,12 @@ const AuthProvider = ({ children }) => {
         signOut(auth)
             .then(result => {
                 console.log(result);
+                //   navigate(from, {replace:true});
                 setUser(null);
                
             })
             .catch(error => console.log(error))
-            // navigate(from , {replace:true});
+          
     }
 
     useEffect(() => {
