@@ -1,10 +1,15 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from '../../firebase/firebase.config';
+import { useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+    // const navigate = useNavigate();
+    // const from = location.state?.from?. pathname || "/signup" ;
+
+
     const auth = getAuth(app);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -35,8 +40,10 @@ const AuthProvider = ({ children }) => {
             .then(result => {
                 console.log(result);
                 setUser(null);
+               
             })
             .catch(error => console.log(error))
+            // navigate(from , {replace:true});
     }
 
     useEffect(() => {

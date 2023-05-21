@@ -8,7 +8,7 @@ const AllToys = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/allToys`);
+            const response = await fetch(`https://b7-a11-toy-marketplace-server.vercel.app/api/allToys`);
             if (response.ok) {
                 const data = await response.json();
                 setToys(data);

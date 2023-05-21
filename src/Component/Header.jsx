@@ -7,7 +7,7 @@ import banner4 from '../assets/images/banner-4.png'
 const Header = () => {
     return (
         <div>
-            <div className="carousel ">
+            <div className="carousel h-2/3 ">
                 <div id="item1" className="carousel-item">
                     <img src={banner1} className="w-[50vw] h-[600px]" />
                     <div className='mt-60 px-20 w-[50vw] h-[600px] '>

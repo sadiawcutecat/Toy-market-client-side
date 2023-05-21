@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {FaUserCircle } from 'react-icons/fa';
 import logo from '../assets/images/logo.png'
 import { useContext } from "react";
@@ -6,6 +6,8 @@ import { AuthContext } from "./provider/AuthProvider";
 
 
 const Navsection = () => {
+    
+
     const {user, handleSignOut} = useContext(AuthContext)
     return (
       

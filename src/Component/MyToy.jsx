@@ -12,7 +12,7 @@ const MyToy = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/myToys?email=${user?.email}`);
+            const response = await fetch(`https://b7-a11-toy-marketplace-server.vercel.app/api/myToys?email=${user?.email}`);
             if (response.ok) {
                 const data = await response.json();
                 setMyToys(data);
@@ -28,7 +28,7 @@ const MyToy = () => {
     const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/api/myToys/${id}`, {
+            fetch(`https://b7-a11-toy-marketplace-server.vercel.app/api/myToys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -44,7 +44,7 @@ const MyToy = () => {
     }
 
     const handleupdate = id => {
-        fetch(`http://localhost:5000/api/myToys/${id}`, {
+        fetch(`https://b7-a11-toy-marketplace-server.vercel.app/api/myToys/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -63,7 +63,7 @@ const MyToy = () => {
                 }
             })
     }
-
+ console.log(myToys);
 
     return (
         <div className="overflow-x-auto">
@@ -91,6 +91,40 @@ const MyToy = () => {
                         handleupdate={handleupdate}
                         ></MyToyRow>)
                     }
+                    {/* {
+                        myToys?.map(myToy => <tr>
+            
+         
+                            <td>
+                                <div className="avatar">
+                                    <div className="rounded w-24 h-24">
+                                    <img src={myToy.photo} alt="Avatar Tailwind CSS Component" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                {myToy.toys_name}
+                            </td>
+                            <td>{myToy.seller_name}</td>
+                            <td>{myToy.email}</td>
+                            <td>{myToy.sub_category}</td>
+                            <td>${myToy.price}</td>
+                            <td>{myToy.rating}</td>
+                            <td>{myToy.quantity}</td>
+                            <th>
+                                <button onClick={() => handleDelete(_id)} className="btn btn-accent text-white">
+                                    Delete
+                                </button>
+                            </th>
+                            <th>
+                                {
+                                    status === 'update' ? <span className="font-bold text-success">Updated</span> :
+                                        <button onClick={() => handleupdate(_id)} className="btn btn-outline btn-accent">Update</button>
+                                         } 
+                            </th>
+                          
+                        </tr>)
+                    } */}
 
                 </tbody>
 

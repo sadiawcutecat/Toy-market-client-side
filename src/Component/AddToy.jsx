@@ -8,17 +8,26 @@ const AddToy = () => {
     const { user } = useContext(AuthContext);
 
     const handleAddToy = event => {
+       
         event.preventDefault();
 
         const form = event.target;
         const name = form.name.value;
+        console.log(name);
         const photo = form.photo.value;
-        const seller_name = form.Seller_name.value;
-        const email = user?.email;
-        const sub_category = form.Sub_category.value;
+        console.log(photo);
+        const seller_name = form.seller_name.value;
+        console.log(seller_name);
+        const sub_category = form.sub_category.value;
+        console.log(sub_category);
         const price = form.price.value;
+        console.log(price);
         const rating = form.rating.value;
+        console.log(rating);
         const quantity = form.quantity.value
+        console.log(quantity);
+        const email = form.seller_email.value
+        console.log(email);
 
         const toys = {
             toys_name: name,
@@ -99,7 +108,7 @@ const AddToy = () => {
                                     <div className="form-control w-1/2">
 
                                         <label className='mt-2' for="category">Sub-Category</label>
-                                        <select className='h-12 mt-2 input input-bordered' name="Sub_category" id='sub-category' >
+                                        <select className='h-12 mt-2 input input-bordered' name="sub_category" id='sub-category' >
 
                                             <option value="frozen dolls">frozen dolls</option>
                                             <option value="animation characters">animation characters</option>
@@ -131,7 +140,8 @@ const AddToy = () => {
                                 <div className='flex justify-center mt-6'>
                                     <button className="btn btn-wide btn-accent btn-outline font-bold font-serif ">Details description</button>
                                 </div>
-                                <button className=" my-9 btn btn-block btn-accent text-white font-serif font-bold">ADD A TOY</button>
+                                <button type='submit' className=" my-9 btn btn-block btn-accent text-white font-serif font-bold">
+                                    ADD A TOY</button>
 
 
                             </form>
