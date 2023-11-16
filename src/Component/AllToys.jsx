@@ -51,6 +51,13 @@ const AllToys = () => {
         </div>
 
     );
+
+
+
+
+
 };
 
 export default AllToys;
+
+

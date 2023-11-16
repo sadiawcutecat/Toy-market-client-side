@@ -8,26 +8,18 @@ const AddToy = () => {
     const { user } = useContext(AuthContext);
 
     const handleAddToy = event => {
-       
-        event.preventDefault();
 
+        event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        console.log(name);
         const photo = form.photo.value;
-        console.log(photo);
         const seller_name = form.seller_name.value;
-        console.log(seller_name);
         const sub_category = form.sub_category.value;
-        console.log(sub_category);
         const price = form.price.value;
-        console.log(price);
         const rating = form.rating.value;
-        console.log(rating);
         const quantity = form.quantity.value
-        console.log(quantity);
         const email = form.seller_email.value
-        console.log(email);
+
 
         const toys = {
             toys_name: name,
